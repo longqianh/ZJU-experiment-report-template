@@ -3,5 +3,6 @@ An experiment report template with LaTeX.
 
 Compile : XeLaTeX
 Language : 中文
-Auther : Peter_H
 University : ZJU
+Auther : Peter_H
+Blog : longqianh.com
