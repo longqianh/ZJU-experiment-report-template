@@ -103,17 +103,17 @@ linkcolor=black
 
 	\vspace*{1cm}
     \begin{center}
-            \Large 实验名称\ \ \underline{\makebox[250pt]{title here}} \\ 
+            \Large 实验名称\ \ \underline{\makebox[220pt]{Title here}} \\ 
             \vspace{0.3cm}
-            \Large 姓名 \ \ \underline{\makebox[220pt]{Peter_H}} \\ 
+            \quad \Large 姓名 \ \quad \underline{\makebox[220pt]{Peter H}} \\ 
             \vspace{0.3cm}
-            学  号\ \ \underline{\makebox[220pt]{3180xxxxxx}}\\
+            \quad \Large 学号\ \quad \underline{\makebox[220pt]{3180xxxxxx}}\\
             \vspace{0.3cm}
-            实验地点\ \ \underline{\makebox[250pt]{你猜}}\\
+            \Large 实验地点\ \ \underline{\makebox[220pt]{你猜}}\\
             \vspace{0.3cm}
-            实验日期\ \ \underline{\makebox[250pt]{2020年 mm 月 dd 日}}\\
+            \Large 实验日期\ \ \underline{\makebox[220pt]{2020年 mm 月 dd 日}}\\
             \vspace{0.3cm}
-            指导老师\ \ \underline{\makebox[250pt]{Peter_H’s Instructors}}\\
+            \Large 指导老师\ \ \underline{\makebox[220pt]{Peter’s Instructors}}\\
             
 
              
@@ -124,8 +124,11 @@ linkcolor=black
 
 \newpage
 % \setcounter{tocdepth}{5}
-\tableofcontents
+
 \thispagestyle{empty} %清楚图片格式（取消掉编号）
+
+% 不想要可以注释掉
+\tableofcontents % 生成目录
 \listoffigures%生成插图
 \listoftables%生成表格
 \thispagestyle{empty} 
@@ -138,8 +141,8 @@ linkcolor=black
 \subsection{图片示例}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{zjdx}
-\caption{浙江大学}
+\includegraphics[width=0.8\textwidth]{filter-result-frequency}
+\caption{来自声音处理的一个实验的酷酷的图片}
 \end{figure}
 
 
@@ -171,22 +174,67 @@ set your language at line 48
 
 \end{lstlisting}
 
-\subsection{其他示例}
+\subsection{引用示例}
+\begin{itemize}
+ \item  LaTeX在线协作网站安利\cite{overleaf}
+ \item  论文引用\cite{six-directional}
+ \item  个人Blog安利嘿嘿\cite{myblog}
+
+\end{itemize}
+
+\subsection{动画示例}
+\subsubsection{pdf插入动画的制作流程}
+
 \begin{enumerate}
- \item  栗子1\cite{apple}
- \item  栗子2
- 
+\item 手里有个gif
+\item 在这里\cite{iloveimg}得到每一帧的图片
+\item 改名，参考示例设置播放参数
+\item 其他需求可自行搜索
 \end{enumerate}
 
+\subsubsection{Adobe Acrobat Needed}
+需要用 Adobe Acrobat 打开pdf才能看到动态的动画，有些pdf阅读器不支持播放动画功能。
+\begin{figure}[H]
+\centering
+\subfigure[light-insight]{
+\animategraphics[width=0.8\textwidth,autoplay=true,loop=true,controls=play]{5}{./6-inside/6-inside-00}{0}{24}
+}
+% controls = play 是只显示播放控件
+
+\end{figure}
+
+
+\subsection{Tikz示例}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=3]
+\draw [thick](-1,0)--(1,0);
+\draw [thick](1,0)--(0,1);
+\draw [thick](0,1)--(-1,0);
+\draw [thick](-0.05,0.95)--(0,0.9);
+\draw [thick](0,0.9)--(0.05,0.95);
+\draw [thick](0,1)--(-1,0);
+\draw [thick,fill=pink] (0,0.4142) circle(0.4142);
+\end{tikzpicture}
+\caption{画了个三角形内切圆}
+\end{figure}
 
 
 
 % \newpage
 % 参考网站
 \begin{thebibliography}{9} %参考文献的数量
-\bibitem{apple}
-  \url{https://www.apple.com.cn/}
+\bibitem{overleaf}
+  \url{http://overleaf.com}
 
+\bibitem{myblog}
+  \url{http://longqianh.com}
+
+\bibitem{iloveimg}
+  \url{https://www.iloveimg.com/zh-cn/convert-to-jpg/gif-to-jpg }
+
+\bibitem{six-directional}
+Chen H, Zheng B, Shen L, et al. Ray-optics cloaking devices for large objects in incoherent natural light[J]. Nature communications, 2013, 4(1): 1-6.
 
 \end{thebibliography}
 
