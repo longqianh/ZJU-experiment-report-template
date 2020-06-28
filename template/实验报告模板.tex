@@ -139,11 +139,34 @@ linkcolor=black
 
 \section{示例}
 \subsection{图片示例}
+\subsubsection{单一图片插入}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{filter-result-frequency}
 \caption{来自声音处理的一个实验的酷酷的图片}
 \end{figure}
+
+\subsubsection{多图并入}
+\begin{figure}[H]
+% \subfigure 插入多图 计算好间距
+\centering    
+\subfigure[len-1] {    
+\includegraphics[width=0.45\textwidth]{len3-1}  
+}     
+\subfigure[len-2] {     
+\includegraphics[width=0.45\textwidth]{len3-2}     
+}    
+\subfigure[len-3] {    
+\includegraphics[width=0.45\textwidth]{len3-3}  
+}   
+\subfigure[len-4] {    
+\includegraphics[width=0.45\textwidth]{len3-4}  
+}   
+
+\caption{插入多图}  
+      
+\end{figure}
+
 
 
 \subsection{表格示例}
@@ -196,9 +219,7 @@ set your language at line 48
 需要用 Adobe Acrobat 打开pdf才能看到动态的动画，有些pdf阅读器不支持播放动画功能。
 \begin{figure}[H]
 \centering
-\subfigure[light-insight]{
 \animategraphics[width=0.8\textwidth,autoplay=true,loop=true,controls=play]{5}{./6-inside/6-inside-00}{0}{24}
-}
 % controls = play 是只显示播放控件
 
 \end{figure}
@@ -221,7 +242,7 @@ set your language at line 48
 
 
 
-% \newpage
+\newpage
 % 参考网站
 \begin{thebibliography}{9} %参考文献的数量
 \bibitem{overleaf}
