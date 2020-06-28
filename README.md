@@ -9,5 +9,5 @@ An experiment report template with LaTeX.
 
 - Auther : Peter_H
 
-- Blog : [longqianh.com](longqianh.com)
+- Blog : [longqianh.com](https://longqianh.com)
 
