@@ -1,0 +1,195 @@
+%!TEX program = xelatex
+
+\documentclass{article}
+\usepackage[UTF8]{ctex}
+\usepackage{indentfirst}
+\usepackage{lmodern}% http://ctan.org/pkg/lm
+\usepackage{setspace}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{relsize}
+\usepackage[usenames]{color}   
+\usepackage{fontspec}
+
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage[rightcaption]{sidecap}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{url}
+
+% 自己画图
+\usepackage{tikz}
+\usepackage{mathpazo}
+\usepackage{pgfplots}
+
+% 插入动画
+\usepackage{animate}
+\usepackage{caption}
+\usepackage{subfigure}
+\usepackage{graphicx}
+
+% 解决目录红框问题
+\hypersetup{
+colorlinks=true,
+linkcolor=black
+}
+
+% 代码格式设置
+\lstset{
+         language = python, numbers=left, 
+         numberstyle=\tiny,keywordstyle=\color{blue!70},
+         commentstyle=\color{red!50!green!50!blue!50},frame=shadowbox,
+         rulesepcolor=\color{red!20!green!20!blue!20},basicstyle=\ttfamily
+}
+
+
+
+
+\newcommand{\myd}{\;\mathrm{d}} %自定义积分变量命令
+\renewcommand{\listtablename}{Tables} %改变listoftable的名字
+\renewcommand{\arraystretch}{1.8} %行间距相对原始间距的倍数
+% \setmonofont{Consolas}
+\renewcommand\refname{参考网站}
+% \setlength{\tabcolsep}{18pt} % 文本到单元格左右边框之间的距离
+% \setlength{\arrayrulewidth}{0.4mm} % 设置表格线宽度
+
+
+\setlength{\parindent}{2em} %控制首行缩进
+\addtolength{\parskip}{3pt} %\parskip 控制段落(paragraph)距离
+%\singlespacing % 设置单倍行距
+%\doublespacing % 设置双倍行距
+%\setstretch{1.25} % 设置行距为1.25
+\onehalfspacing % 1.5倍行距
+\graphicspath{{./figures/}} % 指定图片所在文件夹
+%\newtheorem{definition}[定义]{section}
+%定制环境: {环境名}[编号延续]{显示名}[编号层次]
+
+%\begin{doublespacing} 特定行距环境 \end{doublespacing}
+
+
+\begin{document}
+\begin{titlepage}
+% titlepage格式可以自己调
+        \vspace*{-3cm}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{zjdx}
+	\end{figure}
+
+	\vspace*{0.5cm}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\linewidth]{QSY}
+	\end{figure}
+	\vspace{-0.5cm}
+	\begin{center}
+		\Huge{\textbf{应用光学实验}}\\
+		
+		\Huge{\textbf{实验报告}}
+	\end{center}
+	
+	\vspace*{0.5cm}
+
+
+	\vspace*{1cm}
+    \begin{center}
+            \Large 实验名称\ \ \underline{\makebox[250pt]{title here}} \\ 
+            \vspace{0.3cm}
+            \Large 姓名 \ \ \underline{\makebox[220pt]{Peter_H}} \\ 
+            \vspace{0.3cm}
+            学  号\ \ \underline{\makebox[220pt]{3180xxxxxx}}\\
+            \vspace{0.3cm}
+            实验地点\ \ \underline{\makebox[250pt]{你猜}}\\
+            \vspace{0.3cm}
+            实验日期\ \ \underline{\makebox[250pt]{2020年 mm 月 dd 日}}\\
+            \vspace{0.3cm}
+            指导老师\ \ \underline{\makebox[250pt]{Peter_H’s Instructors}}\\
+            
+
+             
+    \end{center}
+        
+    
+\end{titlepage}
+
+\newpage
+% \setcounter{tocdepth}{5}
+\tableofcontents
+\thispagestyle{empty} %清楚图片格式（取消掉编号）
+\listoffigures%生成插图
+\listoftables%生成表格
+\thispagestyle{empty} 
+
+\newpage
+\pagenumbering{arabic}%重新开始标号,阿拉伯数字形式
+
+
+\section{示例}
+\subsection{图片示例}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{zjdx}
+\caption{浙江大学}
+\end{figure}
+
+
+\subsection{表格示例}
+\begin{table}[H]
+  \centering
+  \caption{数据记录表}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \multicolumn{3}{|c|}{合并单元格}\\
+    \hline
+    \multicolumn{3}{|c|}{text}\\
+    \hline
+    手机焦距 $f_2'$/mm & 物到手机镜头的距离/mm &眼镜到手机的距离(透镜间隔 $d$/mm）\\
+    \hline
+    4.00  & 150.00  & 40.00  \\
+    \hline
+    像的放大倍率 $\beta$ &中间像到眼镜的位置/mm &中间像的大小$y'$/mm\\
+    \hline
+    0.024  & -63.25 & 5.75 \\
+    \hline
+    \end{tabular}
+\end{table}
+
+\subsection{代码示例}
+\begin{lstlisting}
+code here
+set your language at line 48
+
+\end{lstlisting}
+
+\subsection{其他示例}
+\begin{enumerate}
+ \item  栗子1\cite{apple}
+ \item  栗子2
+ 
+\end{enumerate}
+
+
+
+
+% \newpage
+% 参考网站
+\begin{thebibliography}{9} %参考文献的数量
+\bibitem{apple}
+  \url{https://www.apple.com.cn/}
+
+
+\end{thebibliography}
+
+
+\end{document}
+
