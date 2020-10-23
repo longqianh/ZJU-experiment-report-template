@@ -11,3 +11,12 @@ An experiment report template with LaTeX.
 
 - Blog : [longqianh.com](https://longqianh.com)
 
+- Nice Latex Generators: 
+
+  - [Tables](https://www.tablesgenerator.com/)
+
+  - Formulas : Mathpix Snip
+
+  - [Graphs](https://csacademy.com/app/graph_editor/)
+
+    
