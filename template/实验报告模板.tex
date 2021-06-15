@@ -1,6 +1,11 @@
 %!TEX program = xelatex
 
-\documentclass{article}
+% \documentclass{article}
+\documentclass[a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+
 \usepackage[UTF8]{ctex}
 \usepackage{indentfirst}
 \usepackage{lmodern}% http://ctan.org/pkg/lm
@@ -17,8 +22,6 @@
 \usepackage{listings}
 \usepackage{relsize}
 \usepackage[usenames]{color}   
-\usepackage{fontspec}
-
 \usepackage[table]{xcolor}
 \usepackage{array}
 \usepackage[rightcaption]{sidecap}
@@ -39,9 +42,16 @@
 
 
 % 解决目录红框问题
+% \hypersetup{
+% colorlinks=true,
+% linkcolor=black
+% }
 \hypersetup{
-colorlinks=true,
-linkcolor=black
+colorlinks=true,       % false: boxed links; true: colored links
+linkcolor=red,          % color of internal links
+citecolor=blue,        % color of links to bibliography
+filecolor=magenta,      % color of file links
+urlcolor=cyan   
 }
 
 % 代码格式设置
@@ -80,17 +90,17 @@ linkcolor=black
 \begin{document}
 \begin{titlepage}
 % titlepage格式可以自己调
-        \vspace*{-3cm}
+        % \vspace*{-3cm}
 	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.7\linewidth]{zjdx}
+		\includegraphics[width=0.5\linewidth]{zjdx}
 	\end{figure}
 
 	\vspace*{0.5cm}
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.5\linewidth]{QSY}
+		\includegraphics[width=0.3\linewidth]{QSY}
 	\end{figure}
 	\vspace{-0.5cm}
 	\begin{center}
