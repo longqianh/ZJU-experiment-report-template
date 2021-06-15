@@ -1,6 +1,6 @@
 # ZJU-experiment-report-template
 
-<img src="https://tva1.sinaimg.cn/large/008i3skNly1grjf6dpfpwj30u00v3dnd.jpg" alt="image-20210616003225050" style="zoom: 50%;" />
+<img src="https://tva1.sinaimg.cn/large/008i3skNly1grjf6dpfpwj30u00v3dnd.jpg" alt="image-20210616003225050" style="zoom: 33%;" />
 
 An experiment report template with LaTeX.
 
